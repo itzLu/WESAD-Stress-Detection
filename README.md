@@ -13,7 +13,7 @@ We use the **WESAD** dataset (Wearable Stress and Affect Detection) by Schmidt e
 📌 **Original dataset citation**:
 > Philipp Schmidt, Attila Reiss, Robert Duerichen, Claus Marberger, and Kristof Van Laerhoven. "Introducing WESAD, a Multimodal Dataset for Wearable Stress and Affect Detection." In Proceedings of the 20th ACM International Conference on Multimodal Interaction, 2018.  
 > [Link to paper](https://dl.acm.org/doi/10.1145/3242969.3242985)  
-> [Original WESAD Dataset on UCI](https://www.kaggle.com/datasets/araneshd/wesad)
+> [Original WESAD Dataset on UCI](https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection)
 
 ---
 
