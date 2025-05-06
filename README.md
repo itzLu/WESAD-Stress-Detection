@@ -59,11 +59,13 @@ The model achieved high accuracy and solid performance metrics across multiple s
 ├── notebooks/
 │   └── Stress-Detection-with-1D-CNN.ipynb       # Final Jupyter Notebook
 ├── data/
-│   └── README.md                          # Instructions on accessing the dataset
+│   └── README.md                              # Instructions on accessing the dataset
 ├── figures/
-│   └── stressed_vs_notstressed_ecg.png   # Visual comparison
-├── requirements.txt                       # Required Python packages
-└── README.md                              # This file
+│   └── stressed_vs_notstressed_ecg.png        # Visual comparison
+├── models/
+│   └── final_binary_1dcnn_class_weights.h5    # Exported model (including architecture and weights)
+├── requirements.txt                           # Required Python packages
+└── README.md                                  # Project description
 ```
 
 ---
