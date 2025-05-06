@@ -93,7 +93,9 @@ jupyter notebook notebooks/Stress-Detection-with-1D-CNN.ipynb
 - Ibrahim Khaled
 - Omar Mohamed
 - **Mohamed Asem**  
-  ![GitHub](https://img.shields.io/badge/GitHub-MohamedAsem-blue?logo=github&logoColor=white) ![Kaggle](https://img.shields.io/badge/Kaggle-MohamedAsem-orange?logo=kaggle&logoColor=white) ![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamed_Asem-blue?logo=linkedin&logoColor=white)
+  ![GitHub](https://img.shields.io/badge/GitHub-%40MohamedAsem-black?logo=github&logoColor=white) [@MohamedAsem](https://github.com/MohamedAsem)  
+  ![Kaggle](https://img.shields.io/badge/Kaggle-%40MohamedAsem-orange?logo=kaggle&logoColor=white) [@MohamedAsem](https://www.kaggle.com/MohamedAsem)  
+  ![LinkedIn](https://img.shields.io/badge/LinkedIn-%40Mohamed_Asem-blue?logo=linkedin&logoColor=white) [@MohamedAsem](https://www.linkedin.com/in/mohamed-asem)
 
 
 ---
