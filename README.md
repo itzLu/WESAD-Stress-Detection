@@ -26,7 +26,7 @@ To upload the dataset to Kaggle (due to internet limitations in Egypt), we creat
 ## 🧪 Methodology
 
 1. **Data Preprocessing**
-   - Extracted relevant signals (ECG, EDA, RESP) for all subjects.
+   - Extracted chest-related signals (ECG, EDA, RESP) for all subjects.
    - Normalized signals using MinMaxScaler.
    - Segmented time-series data into overlapping windows.
    - Created binary labels (0 = Not Stressed, 1 = Stressed).
