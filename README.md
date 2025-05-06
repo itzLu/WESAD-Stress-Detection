@@ -1,6 +1,6 @@
 # Stress Detection Using Physiological Signals (WESAD Dataset) 📊🧠
 
-This project explores the use of deep learning models for binary classification of stress using the WESAD dataset. It focuses on ECG, EDA, and RESP signals to determine whether a subject is stressed or not.
+This project explores the use of deep learning models for binary classification of stress using the WESAD dataset. It focuses on chest signals consisting of ECG, EDA, and RESP signals to determine whether a subject is stressed or not.
 
 ---
 
