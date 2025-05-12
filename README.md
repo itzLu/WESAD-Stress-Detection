@@ -118,6 +118,7 @@ jupyter notebook notebooks/Stress-Detection-with-1D-CNN.ipynb
 - **Amin Maher**  
   [GitHub](https://github.com/amin657) | [Kaggle](https://www.kaggle.com/aminmaher) | [LinkedIn](https://www.linkedin.com/in/amin-maher-0a075b242)
 - **Ibrahim Khaled**
+  [GitHub](https://github.com/IbrahimKhaled47) | [Kaggle](https://www.kaggle.com/ibrahimkhaled474) | [LinkedIn](https://www.linkedin.com/in/ibrahimkhaled47)
 - **Omar Eldash**  
   [GitHub](https://github.com/Omareldash) | [Kaggle](https://www.kaggle.com/omareldash75) | [LinkedIn](https://www.linkedin.com/in/omareldash7512)
 - **Mohamed Asem**  
