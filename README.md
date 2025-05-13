@@ -88,7 +88,7 @@ After training, we tested the final model on a **completely separate and balance
 │   └── README.md                                # Dataset access notes
 ├── figures/
 │   └── stressed_vs_notstressed_ecg.png          # ECG comparison plot
-|   └── 1d_cnn_model.png                         # Model architecture
+│   └── 1d_cnn_model.png                         # Model architecture
 ├── models/
 │   └── Binary_1DCNN_Class_Weights.h5            # Trained model file
 ├── requirements.txt                             # Dependencies
