@@ -28,7 +28,7 @@ Due to internet access limitations in Egypt, we used a **Google Cloud VPS** to d
 - Selected chest signals: `ECG`, `EDA`, and `RESP`.
 - Applied MinMax scaling to normalize each signal independently.
 - Segmented time-series data using:
-  - Window size: **640 samples** (~5 seconds at 128 Hz)
+  - Window size: **3500 samples** (~5 seconds at 700 Hz)
   - Overlap: **50%**
 - Converted original labels into binary:
   - **0** → Non-Stressed (`baseline` + `amusement` + `meditation`)
@@ -41,10 +41,10 @@ Due to internet access limitations in Egypt, we used a **Google Cloud VPS** to d
 
 ### 🧠 3. Model Architecture
 - **1D Convolutional Neural Network (CNN)** using **Keras**:
-  - Several `Conv1D + BatchNorm` layers
-  - `MaxPooling` + `Dropout` regularization
+  - Several `Conv1D + BatchNorm + MaxPooling` layers
+  - `GlobalAveragePooling1D + Dense + Dropout` regularization
   - Dense output layer with `sigmoid` activation  
-- Input shape: `(640, 3)` → 640 timesteps per window, 3 channels (signals)
+- Input shape: `[num_windows, 3500, 8]` → 3500 timesteps per window, 8 channels (signals)
 
 ### 🏋️ 4. Training Strategy
 - Used stratified train-test split to preserve class balance.
@@ -88,8 +88,9 @@ After training, we tested the final model on a **completely separate and balance
 │   └── README.md                                # Dataset access notes
 ├── figures/
 │   └── stressed_vs_notstressed_ecg.png          # ECG comparison plot
+|   └── 1d_cnn_model.png                         # Model architecture
 ├── models/
-│   └── final_binary_1dcnn_class_weights.h5      # Trained model file
+│   └── Binary_1DCNN_Class_Weights.h5            # Trained model file
 ├── requirements.txt                             # Dependencies
 └── README.md                                    # Project README
 ```
