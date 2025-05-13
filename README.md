@@ -1,6 +1,6 @@
 # Stress Detection Using Physiological Signals (WESAD Dataset) 📊🧠
 
-This project implements a deep learning approach to binary stress classification using the **WESAD** dataset. We focus specifically on three chest signals: **ECG**, **EDA**, and **RESP**, using a custom 1D CNN model and a segmentation-based preprocessing pipeline.
+This project implements a deep learning approach to binary stress classification using the **WESAD** dataset. We focus specifically on 8 chest signals: **ECG**, **EDA**, **EMG**, **RESP**, **TEMP**, and **ACC-3D**, using a custom 1D CNN model and a segmentation-based preprocessing pipeline.
 
 > 🚀 **Achieved over 99% accuracy** with high generalization across subjects, even after final testing on a *balanced and unseen test set*.
 
@@ -25,14 +25,14 @@ Due to internet access limitations in Egypt, we used a **Google Cloud VPS** to d
 ## ⚙️ Methodology & Pipeline
 
 ### 🧹 1. Preprocessing
-- Selected chest signals: `ECG`, `EDA`, and `RESP`.
-- Applied MinMax scaling to normalize each signal independently.
-- Segmented time-series data using:
-  - Window size: **3500 samples** (~5 seconds at 700 Hz)
-  - Overlap: **50%**
-- Converted original labels into binary:
-  - **0** → Non-Stressed (`baseline` + `amusement` + `meditation`)
-  - **1** → Stressed (`stress` only)
+- **Selected chest signals**: `ECG`, `EDA`, `EMG`, `RESP`, `TEMP`, and `ACC-3D`.
+- **Applied Standardization**: Used Z-score standardization (zero mean, unit variance) on the features.
+- **Segmented time-series data**:
+  - **Window size**: **3500 samples** (~5 seconds at 700 Hz)
+  - **Overlap**: **50%** between consecutive windows
+- **Converted original labels into binary**:
+  - **0** → Non-Stressed (combination of `baseline`, `amusement`, and `meditation` labels)
+  - **1** → Stressed (`stress` label only)
 
 ### 🔍 2. Data Analysis
 - Visualized ECG patterns between classes.
@@ -47,9 +47,17 @@ Due to internet access limitations in Egypt, we used a **Google Cloud VPS** to d
 - Input shape: `[num_windows, 3500, 8]` → 3500 timesteps per window, 8 channels (signals)
 
 ### 🏋️ 4. Training Strategy
-- Used stratified train-test split to preserve class balance.
-- Applied class weights to handle imbalance during training.
-- Employed callbacks (`EarlyStopping`, `ModelCheckpoint`) to prevent overfitting.
+- **Stratified Train-Test Split**: Used stratified splitting to preserve class balance in the training and validation sets.
+- **Class Weighting**: Applied class weights to address class imbalance during training by using `compute_class_weight('balanced')`.
+- **Model Compilation**: 
+  - **Optimizer**: Used the `Adam` optimizer with a learning rate of **5e-4**.
+  - **Loss Function**: Chose `binary_crossentropy` as the loss function for binary classification.
+  - **Metrics**: Monitored **accuracy** during training.
+- **Early Stopping**: Used `EarlyStopping` callback to monitor `val_loss`, with a patience of 3 epochs to prevent overfitting and restore the best weights.
+- **Model Training**: 
+  - **Epochs**: 20
+  - **Batch size**: 64
+  - **Validation Split**: 20% of the data used for validation during training
 
 ---
 
